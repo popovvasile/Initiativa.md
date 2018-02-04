@@ -1,0 +1,10 @@
+Collecting django-sslify
+  Downloading django-sslify-0.2.7.tar.gz (127kB)
+Requirement already satisfied (use --upgrade to upgrade): Django>=1.0 in /home/popovvasile/nigga/venv/lib/python2.7/site-packages (from django-sslify)
+Building wheels for collected packages: django-sslify
+  Running setup.py bdist_wheel for django-sslify: started
+  Running setup.py bdist_wheel for django-sslify: finished with status 'done'
+  Stored in directory: /home/popovvasile/.cache/pip/wheels/ae/aa/1b/20f19472fddf9b677641cf7f3b35fdd6d6631ab1757e097f81
+Successfully built django-sslify
+Installing collected packages: django-sslify
+Successfully installed django-sslify-0.2.7

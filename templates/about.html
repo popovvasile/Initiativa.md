@@ -1,0 +1,146 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	{% include 'head.html' %}
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		{% include 'navbar.html' %}
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+        
+		<!-- header start -->
+		<!-- header end -->
+       <!-- Add Petition-->
+        
+ <!-- section start -->
+
+<div class="space"></div>
+<div class="space"></div>
+<div class="space80"></div>
+<!--
+        <div class="container">
+        <div class="row">
+          <div class="col-md-12" id="team">
+				<h1 class="title text-center">Echipa noastră</h1>
+            <p class="text-center"></p>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+              <img src=" {% static  './images/vasile_popa.jpg' %}"
+            class="center-block img-circle img-responsive"> 
+            <h3 class="text-center">Vasile Popa</h3>
+            <p class="text-center">Back-End Developer</p>
+          </div>
+            <div class="col-md-3">
+            <img  src=" {% static  './images/alina_goncear.jpg' %}"
+            class="center-block img-circle img-responsive"> 
+            <h3 class="text-center">Alina Goncear</h3>
+            <p class="text-center">Front-End Developer</p>
+          </div>
+            <div class="col-md-3">
+                <img src=" {% static  './images/roman_gluck.jpg' %}"
+            class="center-block img-circle img-responsive"> 
+            <h3 class="text-center">Roman Ghica</h3>
+            <p class="text-center">Project Manager</p>
+          </div>
+            <div class="col-md-3">
+                <img src=" {% static  './images/doina.jpg' %}"
+            class="center-block img-circle img-responsive"> 
+            <h3 class="text-center">Doina Iațîșin</h3>
+            <p class="text-center">Content Manager</p>
+          </div>
+        </div>
+      </div>
+    </div>   
+-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="space"></div>
+                <h1 class="title text-center">Despre proiect</h1>
+                     <p class="large">
+                       <p>Scopul proiectului este informarea cetățenilor Republicii Moldova despre proiectele de lege create &icirc;n instituțiile de stat, comunicarea eficientă dintre instituțiile de stat și cetățeni cu ajutorul petițiilor și propunerilor.</p>
+                       <p>&nbsp;</p> 
+                       <p><b>Proiectul este la moment în dezvoltare şi oferă la moment următoarele funcţii disponibile spre vizualizare:</b></p>
+                            <ul>
+                                <li>Colectarea proiectelor de lege si postarea lor pe resursa informaţională <a href="http://www.iniţiativa.org">iniţiativa.org</a></li>
+                                <li>Postarea ştirilor legate de proiectele de lege spre aprobare, deja aprobate, rezultatele proiectelor de lege aprobate.</li>
+                                <li>Crearea petiţiilor.</li>
+                                <li>Crearea utilizatorilor.</li>
+                                <li>Votarea pro sau contra pentru proiecte de legi.</li>
+                                <li>Votarea pentru petiţii.</li>
+                                <li>Comentarii la proiecte de lege, petiţii, ştiri.</li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <p><b>Următoarele elemente care vor fi introduse &icirc;n proiect:</b></p>
+                            <ul>
+                                <li>Semnătura digitală</li>
+                                <li>Votarea cu ajutorul semnăturii digitale a proiectelor de lege şi petiţiilor.</li>
+                                <li>Statistica voturilor</li>
+                            </ul>
+                            <p>&nbsp;</p>
+                            <p><b>Răspunsuri la &icirc;ntrebări frecvente:</b></p>
+                            <ol>
+                                <li><em>Ce se &icirc;nt&icirc;mplă după votarea pro sau contra proiectele de lege?</em> -&nbsp;Datele sunt colectate şi trimise &icirc;n formă de raport iniţiatorului iniţial al proiectului de lege.</li>
+                                </ol>
+                                <ol start="2">
+                                <li><em>Ce se &icirc;nt&icirc;mplă cu voturile pentru petiţii după finisarea procesului de votare?</em> -&nbsp;La moment ele reflectă suportul utilizatorilor pentru un anumit caz. Ulterior după testarea proiectului timp de o lună, datele vor fi colectate, documentate şi tranmise la instanţa corespunzătoare căreia este adresată petiţia.</li>
+                                </ol>
+                                <ol start="3">
+                                <li><em>Eu am creat o petiţie. De ce ea nu se vizualizează?</em> -&nbsp;Toate petiţiile trec o verificare &icirc;nainte de a fi vizualizate pentru alţi utilizatori.</li>
+                                </ol>
+                                <ol start="4">
+                                <li><em>Cum pot să propun o &icirc;mbunătăţire pentru proiect?</em> -&nbsp;Utilizaţi forma noastră de contact pentru propuneri şi sugestii.</li>
+                            </ol>
+                            <p>&nbsp;</p>
+                            <p><u>Realizarea proiectului Iniţiativa a fost posibilă datorită unui grant câştigat în cadrul primului hackathon de jurnalism civic din R. Moldova „Puterea a cincea”, organizat de Centrul pentru Jurnalism Independent din Republica Moldova și Internews.</u></p>
+
+                     </p>
+                    <!-- Info care va fi adaugat mai tarziu
+                     <ul class="list-icons">
+                        <li><i class="fa fa-map-marker pr-10"></i> One infinity loop, 54100</li>
+                        <li><i class="fa fa-phone pr-10"></i> +00 1234567890</li>
+                        <li><i class="fa fa-fax pr-10"></i> +00 1234567891 </li>
+                        <li><i class="fa fa-envelope-o pr-10"></i> your@email.com</li>
+                     </ul>
+                    -->
+               </div>
+            
+                <div class="col-md-12">
+                    <p>&nbsp;</p>
+                    <img class="img-responsive center-block" src="../static/images/puterea5.png" >
+               </div>
+            </div>
+        </div>
+
+      <!-- .subfooter start -->
+      <!-- ================ -->
+    <div class="space"></div>
+      <div class="subfooter">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <p class="text-center">
+                     Copyright © 2016 Initiativa
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- .subfooter end -->
+      <!-- footer end -->
+
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		
+
+	</body>
+</html>

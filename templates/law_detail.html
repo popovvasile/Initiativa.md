@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	{% include 'head.html' %}
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+        {% include 'navbar.html' %}
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+        
+		<!-- header start -->
+		<!-- header end -->
+       <!-- Add Petition-->
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+<div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-md-12">
+
+                <!-- Blog Post -->
+
+                <!-- Title -->
+                <h2 id="news-title">{{ law.question }}</h2>        
+                <hr>
+
+                <!-- Date/Time -->
+                <p><span class="glyphicon glyphicon-time"></span> Postat pe <span id="news-date-post">{{ law.pub_date }</span></p>
+
+                <hr>
+
+                <!-- Preview Image -->
+                <img class="img-responsive center-block" src="{{ law.image.url }}" alt="">
+
+                <hr>
+               
+                {% if  law.content %}
+                <!-- Post Content -->
+                <p class="h3-bold">Descriere</p>
+                <p class="lead">{{ law.content }}</p>
+
+                <hr>
+
+                {% endif %}
+                {% if  law.impact %}
+                <p class="h3-bold">Impact</p>
+                <p class="lead">{{ law.impact }}</p>
+
+                {% endif %}
+                {% if  law.solution%}
+                <hr>
+                <p class="h3-bold">Soluție</p>
+                <p class="lead">{{ law.solution }}</p>
+                
+                <hr>
+                {% endif %}
+
+                {% if  law.file_url_1%}
+                <hr>
+                <p class="h3-bold">Documentul original</p>
+                <p class="lead">{{ law.file_url_1 }}</p>
+                
+                <hr>
+                {% endif %}
+                {% if  law.url_proiect%}
+                <hr>
+                <p class="h3-bold">Link la proiect</p>
+                <p class="lead">{{ law.url_proiect }}</p>
+                
+                <hr>
+                {% endif %}
+{% if request.user.is_authenticated %}
+{% if error_message %}
+<div class="aler alert-danger">{{ error_message }}</div>
+
+{% else %}
+
+<div class="container">
+<div class="row" id="row-voting">
+    <form action="{% url 'laws:law_yes_vote' law.id %}" method="post">
+    {% csrf_token %}
+    <button class="btn btn-success" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" > 
+    <label >SUNT DE ACORD</label>
+    </form>
+        
+</div>        
+
+<div class="row" id="row-voting">
+    <form action="{% url 'laws:law_no_vote' law.id %}" method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" > 
+    <label >NU SUNT DE ACORD</label>
+    </form>
+
+</div>
+</div>
+    
+{% endif %}
+{% else %}
+<div class='container'>
+    <div class="row" style="font-size: 18px;">
+            <p class="h4">Vă rugăm să vă autentificaţi:</p>
+            <a href="http://initiativa.org/accounts/register/"><button name="button" class="btn btn-primary btn-responsive">Înregistraţi-vă</button></a> sau <a href="http://initiativa.org/accounts/login/"><button name="button" class="btn btn-primary btn-responsive">Accesaţi contul</button></a>
+    </div>
+</div>
+{% endif %}
+
+
+
+                <!-- Blog Comments -->
+
+                
+{% load comments %}
+
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}fluent_comments/css/ajaxcomments.css" />
+<script type="text/javascript" src="{{ STATIC_URL }}fluent_comments/js/ajaxcomments.js"></script>
+
+{% render_comment_list for law %}
+{% render_comment_form for law %}
+
+
+                
+
+
+            </div>
+
+            
+        </div>
+        <!-- /.row -->
+
+       <div class="space"></div>
+
+    </div>
+		<!-- footer end -->
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+{% include 'subfooter.html' %}
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

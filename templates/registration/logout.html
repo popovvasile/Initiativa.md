@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block content %}
+<div class="space"></div>
+<div class="space"></div>
+<div class="space"></div>
+<div class="space"></div>
+<div class="container">
+    <div class="alert alert-success">Dvs. ați ieșit din cont cu succes.</div>
+
+    <a href="{% url 'auth_login' %}"><button name="button" class="btn btn-primary btn-responsive">Logare</button></a>
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+1) problems with "registration_profile activated" field
+Solution- new migrations, new database
+2)distribute package install
+Solution- write in gitignore about distribute. p.s. Never do pip freeze > requiremts.txt
+3)Comments - redirect on the same page
+"<input type="hidden" name="next" value="{% if next %}{{ next }}{% else %}{{ form.target_object.get_absolute_url }}{% endif %}" />" + get_absolute_url in the models is a must
+4)CSFR token strange  error- most probably the problem is with the smtp.mailserver connection. Don't look for the error in the template. 

@@ -1,0 +1,88 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	{% include 'head.html' %}
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		{% include 'navbar.html' %}
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+        
+		<!-- header start -->
+		<!-- header end -->
+       <!-- Add Petition-->
+        <div class="alert alert-success"><strong>{{ message }}</strong> </div>
+
+<div class="space"></div>
+ 
+		<!-- Contact form start -->
+		<!-- ================ -->
+<div class="space"></div>
+         <div class="container">
+            <h1 class="title text-center" id="contact">Contactați-ne</h1>
+            <div class="space">
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="footer-content">
+                     <p class="large">
+                        Contactați echipa proiectului civic "Inițiativa" pentru suport, propuneri și sugestii, feedback. Opiniile Dvs. contează extrem de mult pentru evoluția proiectului. Vă mulțumim mult anticipat pentru implicare!
+                     </p>
+                    <!-- Info care va fi adaugat mai tarziu
+                     <ul class="list-icons">
+                        <li><i class="fa fa-map-marker pr-10"></i> One infinity loop, 54100</li>
+                        <li><i class="fa fa-phone pr-10"></i> +00 1234567890</li>
+                        <li><i class="fa fa-fax pr-10"></i> +00 1234567891 </li>
+                        <li><i class="fa fa-envelope-o pr-10"></i> your@email.com</li>
+                     </ul>
+                    -->
+                  </div>
+               </div>
+                     <form role="form" id="footer-form">
+
+
+                <div class='col-md-6'>
+
+                    <form method='POST' action=''>{% csrf_token %}
+                    {{ form|crispy }}
+
+                    <input class='btn btn-default' type='submit' value='Trimite' />
+
+                    </form>
+                </div>
+
+                     </form>
+            </div>
+         </div>
+      <!-- Contact form end -->
+
+      <!-- .subfooter start -->
+      <!-- ================ -->
+    <div class="space"></div>
+      <div class="subfooter">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <p class="text-center">
+                     Copyright © 2016 Initiativa
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- .subfooter end -->
+      <!-- footer end -->
+
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		
+
+	</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+
+{% if request.user.is_authenticated %}
+<div class='container'>
+    <div class="row" style="font-size: 18px;">
+            <p class="h4">Sunteţi deja înregistrat.</p>
+             
+    </div>
+</div>
+{% else %}
+{% block content %}
+<div class="space"></div>
+<div class="space"></div>
+<div class="space"></div>
+<div class="space"></div>
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
+<h1>Înregistrare</h1>
+<form method="post" action=".">
+
+  {{ form|crispy }}
+  {% csrf_token %}
+  <input class='btn btn-block btn-primary' type="submit" value="{% trans 'Join' %}" />
+</form>
+</div>
+</div>
+
+<hr/>
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3 text-align-center'>
+<p>Doriți să vă <a href="{% url 'auth_login' %}">Logați</a>?</p>
+</div>
+</div>
+
+
+{% endblock %}
+{% endif %}

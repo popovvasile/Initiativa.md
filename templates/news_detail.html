@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	{% include 'head.html' %}
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+        {% include 'navbar.html' %}
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+        
+		<!-- header start -->
+		<!-- header end -->
+
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+<div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-md-12">
+
+                <!-- Blog Post -->
+
+                <!-- Title -->
+                <h1 id="news-title">{{ news.title }}</h1>        
+                <hr>
+
+                <!-- Date/Time -->
+                <p><span class="glyphicon glyphicon-time"></span> Postat pe <span id="news-date-post">{{ news.pub_date }} </span></p>
+
+                <hr>
+
+                <!-- Preview Image -->
+                <img class="img-responsive center-block" src="{{ news.image.url }}" alt="">
+
+                <hr>
+
+                <!-- Post Content -->
+                <p class="lead">{{ news.content }}</p>
+
+                <hr>
+
+                <!-- Blog Comments -->
+
+
+
+
+
+{% load comments %}
+
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}fluent_comments/css/ajaxcomments.css" />
+<script type="text/javascript" src="{{ STATIC_URL }}fluent_comments/js/ajaxcomments.js"></script>
+
+{% render_comment_list for news %}
+{% render_comment_form for news %}
+
+            </div>
+
+
+        </div>
+        <!-- /.row -->
+
+       <div class="space"></div>
+
+    </div>
+		<!-- footer end -->
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+{% include 'subfooter.html' %}
+	</body>
+</html>

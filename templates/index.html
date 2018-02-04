@@ -1,0 +1,400 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	{% include 'head.html' %}
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+        
+		<!-- header start -->
+<!-- ================ -->
+<header class="header fixed clearfix navbar navbar-fixed-top">
+<div class="container-menu">
+  <div class="row-menu">
+    <div class="col-md-2">
+      <!-- header-left start -->
+      <!-- ================ -->
+      <div class="header-left clearfix">
+        <!-- logo -->
+
+          
+        <!-- name-and-slogan -->
+        <div class="site-name-and-slogan smooth-scroll">
+          <div class="site-name">
+            <a href="/">INITIATIVA</a>
+          </div>
+          <div class="site-slogan">
+            Proiect Civic
+          </div>
+        </div>
+      </div>
+      <!-- header-left end -->
+    </div>
+    <div class="col-md-10">
+      <!-- header-right start -->
+      <!-- ================ -->
+      <div class="header-right clearfix">
+        <!-- main-navigation start -->
+        <!-- ================ -->
+        <div class="main-navigation animated">
+          <!-- navbar start -->
+          <!-- ================ -->
+          <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <!-- Toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                
+                <!-- <li><a href="/about/">Despre</a></li> -->
+                <li><a href="/news/">Ştiri</a></li>
+                <li><a href="/laws/">Proiecte de lege </a></li>
+                <li><a href="/petitions/"> Petiții </a></li>
+                
+                <li><a href="/addpetitions/">Propune Petiție</a></li>
+                <!-- <li><a href="/addpetitions/">Adaugă</a></li> -->
+                
+                <!-- <li><a href="/#contact">Contact</a></li> -->
+                <ul class="nav navbar-nav navbar-right">
+                   
+                  <li><a href="/accounts/login/">Login</a></li>
+                   
+                </ul>
+                 <!-- 
+                <form class='navbar-form navbar-right' method='POST' action='/accounts/login/'>
+                   <input type='hidden' name='csrfmiddlewaretoken' value='CfWMnQywXjFAsBYqanpqkqR237TM60lP' />
+                  <div class='form-group'>
+                    <input type='text' class='form-control' name='username' placeholder='Username'/>
+                  </div>
+                  <div class='form-group'>
+                    <input type='password' class='form-control' name='password' placeholder='Password'/>
+                  </div>
+                  <button type='submit' class='btn btn-default'>Login</button>
+                </form>
+                  -->
+              </ul></div>
+            
+          </div>
+        </nav></div>
+        
+        <!-- navbar end -->
+      </div>
+      <!-- main-navigation end -->
+    </div>
+    <!-- header-right end -->
+  </div>
+</div>
+
+</header>
+<!-- header end -->
+
+
+
+
+
+         <script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
+         <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+         <!-- Modernizr javascript -->
+         <script type="text/javascript" src="/static/plugins/modernizr.js"></script>
+         <!-- Isotope javascript -->
+         <script type="text/javascript" src="/static/plugins/isotope/isotope.pkgd.min.js"></script>
+         <!-- Backstretch javascript -->
+         <script type="text/javascript" src="/static/plugins/jquery.backstretch.min.js"></script>
+         <!-- Appear javascript -->
+         <script type="text/javascript" src="/static/plugins/jquery.appear.js"></script>
+         <!-- Initialization of Plugins -->
+         <script type="text/javascript" src="/static/js/template.js"></script>
+         <!-- Custom Scripts -->
+         <script type="text/javascript" src="/static/js/custom.js"></script>
+
+
+		<!-- banner start -->
+		<!-- ================ -->
+		<div id="banner" class="banner">
+			<div class="banner-image" style="position: relative; z-index: 0; background: none;">                                <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 367px; width: 1349px; z-index: -999998; position: absolute;"><img src="https://initiativamd.s3.amazonaws.com/static/js/banner.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1349px; height: 851.544px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -242.272px;"></div></div>
+			<div class="banner-caption">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
+							<h1 class="text-center">Proiectul civic <span>INIŢIATIVA</span></h1>
+							<p class="lead text-center">Scopul proiectului este informarea cetățenilor
+ Republicii Moldova despre legile create în instituțiile de stat, comunicarea eficientă dintre instituțiile de stat și cetățeni cu ajutorul petițiilor și propunerilor. 
+                            </p>
+                            <div class="row">
+                                <div class="col-md text-center">
+                                    <a href="/about/">Află mai mult...</a>
+                                    <div class="space-1"></div>
+                                   <a href="./accounts/register/"><button name="button" id="button-banner" class="btn btn-primary btn-responsive">Înregistrare</button></a>
+                                    <div class="space-1"></div>
+                                    <a href="./accounts/login/">Logare</a>
+                                </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+    
+    
+    <!-- <div class="default-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center scrollspy smooth-scroll">
+                         <p id="title-arrow"><b>Vezi legi și petiții</b></p>
+                            <a href="#laws">
+                                <img href="#laws" class="img-responsive center-block" src="/static/images/arrow-scrolldown3.png"></img>
+                            </a>
+					</div>
+				</div>
+			</div>
+		</div> -->
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+      
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+
+		<!-- banner end -->
+
+
+		<!-- section start -->
+		<!-- ================ -->
+
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+<div class="space"></div>
+<div class="container">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <h1 class="title text-center">Legi</h1>
+            
+            <!-- Block Nr. 1 from "Legi" column  -->
+            
+                        {% if law %}
+            {% for p in law %}
+            {% if p.posted == True %}
+            <div class="col-md-10 col-md-offset-1 isotope-item laws col-center">
+                <div class="image-box">
+                  <div class="overlay-container">
+                    <img src="{{ p.image.url }}" alt="">
+                    <a class="overlay"  data-target="#law-1" id="laws" href="{% url 'laws:law_detail' p.id %}">
+
+                      <i class="fa fa-search-plus"></i>
+                      <span>{{ p.law_level }}</span>
+                    </a>
+                  </div>
+                           <a  data-target="#law-1" href="{% url 'laws:law_detail' p.id %}">{{ p.question|truncatewords:10 }}</a>
+                </div>
+
+              </div>                                 
+                     {% endif %}
+                        {% endfor %}
+
+                                 {% else %}
+                     <p>La moment nu sunt alte proiecte de legi</p>
+                     {% endif %}
+
+            
+            
+                          <!-- Button "Alte legi" for showing more existing items of laws -->
+                 <p>
+                   
+                      <div class="text-center">
+                      <a class="btn btn-primary text-center"  href="./laws/" >
+                        Alte Legi
+                      </a>
+                      </div>
+                </p>
+            
+    </div>
+        
+        <div class="col-md-6">
+            <h1 class="title text-center">Petiții</h1>
+            
+            <!-- Block Nr. 1 from "Petitii" column  -->
+{% if petition %}
+            {% for p in petition %}
+            {% if p.posted == True %}
+              <div class="col-md-10 col-md-offset-1 isotope-item laws col-center">
+                <div class="image-box">
+                  <div class="overlay-container">
+                    <img src="{{ p.image.url }}" alt="">
+                    <a class="overlay" href="{% url 'petitions:detail' p.id %}" data-target="#petition-1" id="laws">
+                      <i class="fa fa-search-plus"></i>
+                      <span>{{ p.petition_level }}</span>
+                    </a>
+                  </div>
+                                        <a href="{% url 'petitions:detail' p.id %}" data-toggle="modal" data-target="#law-10">{{ p.question|truncatewords:10 }}</a>
+                </div>
+
+              </div>
+            {% endif %}
+                                            {% endfor %}
+
+                                 {% else %}
+                     <p>La moment nu sunt alte petiţii</p>
+                     {% endif %}
+
+            
+<!-- Button "Alte petitii" for showing more existing items of petitii -->
+                 <p>
+                    
+
+                   </div>
+                      <div class="text-center">
+                      <a class="btn btn-primary text-center"  href="./petitions/" >
+                        Alte Petiții
+                      </a>
+                      </div>
+                </p>
+        
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-12 text-center">
+    <div class="space"></div>
+    <a href="/addpetitions/"><button type="button" class="propose-petition btn btn-danger">PROPUNE PETIȚIE</button></a>
+    <div class="space"></div>
+</div>
+							
+
+        <!-- News - Alina-->
+        <div class="space"></div>
+        <h1 class="title text-center" id="news">Ştiri</h1>
+        <div class="space"></div>
+        <div class="row" id="news-block">
+
+
+            <div class="col-md-2"></div>
+
+
+
+{% if news %}
+{% for l in news %}
+          <div class="col-md-4">
+          
+            <div class="thumbnail">
+              <img src="{{ l.image.url }}" alt="..." class="image-news">
+              <div class="caption">
+                <h3>{{ l.title }}</h3>
+                <p>{{ l.content | truncatewords:80 }} </p>
+                  <div class="space" id="space-voting"></div>
+                <p><a href="/news/{{ l.id }}/" class="btn btn-primary" role="button">Citește mai mult</a></p>
+              </div>
+            </div>
+            </div>
+            {% endfor %}
+
+    {% else %}
+   <p>
+      No news are available.
+   </p>
+    {% endif %}
+            
+
+
+
+
+            <div class="col-md-2"></div>
+
+
+
+        </div>
+
+
+
+
+            <div class="row" id="news-block">
+            
+<div class="row">
+                                    <div class="col-md-12 text-center subfooter-links">
+                                        
+                                          <a href="/news/"><button type="button" class="btn btn-info">Vezi alte ştiri</button></a>
+                                        
+                                                                         
+                                    </div>
+                                </div>
+
+
+
+<div class="col-md-12 text-center">
+    <div class="space"></div>
+    
+    <div class="space"></div>
+</div>
+
+
+        <!-- News - Alina-->
+        
+		<!-- section start -->
+		<!-- ================ -->
+<!--             <h1 class="title text-center" id="news">Statistică</h1>
+            <div class="space"></div>
+            <div>
+              <a href="#"><img class="img-responsive center-block"  src="/static/images/statistics.jpg" id="statistics" alt="..."></a>
+            </div> -->
+            
+		<!-- section end -->
+
+
+			<!-- .subfooter start -->
+			<!-- ================ -->
+            <div class="space"></div>
+            <div class="subfooter">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 text-center subfooter-links">
+                                            
+                                          <a href="/about/" class="linkSpace">Despre proiect</a>
+                                          <a href="/addpetitions/" class="linkSpace" >Propune petiție</a>
+                                          <a href="/accounts/register/" class="linkSpace">Înregistrare</a>
+                                        <a href="{% url 'contact' %}">Contact</a>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+
+
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-center">Copyright © 2016 <a target="_blank" href="www.initiativa.org">Digital Democracy</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- .subfooter end -->
+		<!-- footer end -->
+
+
+
+
+
+	</body>
+</html>

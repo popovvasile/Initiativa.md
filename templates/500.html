@@ -1,0 +1,19 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	{% include 'head.html' %}
+
+    <header id="top" class="BackImg">
+        <div class="text-vertical-center">
+            <h1>Oops! Eroare 500 - Internal Server Error</h1>
+            <h3>Se pare că ceva nu a mers bine! Reveniți după ceva timp...</h3>
+            <br>
+            <a href="{% url 'home' %}" class="btn btn-primary btn-responsive">Pagina Principală</a>
+        </div>
+    </header>
+	
+</html>

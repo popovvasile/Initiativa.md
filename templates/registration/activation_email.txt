@@ -1,0 +1,13 @@
+{% load i18n %}
+{% trans "Activează-ți contul de pe" %} {{ site.name }}:
+
+Bună!
+
+Faceți click pe link-ul de mai jos pentru a vă activa contul.
+
+http://{{ site.domain }}{% url 'registration_activate' activation_key %}
+
+
+{% blocktrans %}Link-ul de mai sus este valabil {{ expiration_days }} zi(le).{% endblocktrans %}
+
+- Echipa Initiativa

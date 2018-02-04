@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	{% include 'head.html' %}
+
+    <header id="top" class="BackImg">
+        <div class="text-vertical-center">
+            <h1>Oops! Eroare 404</h1>
+            <h3>Din păcate pagina pe care o căutați nu poate fi găsită... </h3>
+            <br>
+            <a href="{% url 'home' %}" class="btn btn-primary btn-responsive">Pagina Principală</a>
+        </div>
+    </header>
+	
+</html>

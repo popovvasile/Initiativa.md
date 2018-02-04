@@ -1,0 +1,202 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	{% include 'head.html' %}
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+        
+		<!-- header start -->
+		<!-- ================ --> 
+{% include 'navbar.html' %}
+
+
+        <!-- News - Alina-->
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <h1 class="title text-center" id="news">Ştiri</h1>
+        <div class="space"></div>
+        <div class="row" id="news-block">
+
+
+            <div class="col-md-2"></div>
+
+
+
+{% if news %}
+{% for l in news %}
+          <div class="col-md-4">
+          
+            <div class="thumbnail">
+              <img src="{{ l.image.url }}" alt="..." class="image-news">
+              <div class="caption">
+                <h3>{{ l.title }}</h3>
+                <p>{{ l.content | truncatewords:50 }} </p>
+                  <div class="space" id="space-voting"></div>
+                <p><a href="/news/{{ l.id }}/" class="btn btn-primary" role="button">Citește mai mult</a></p>
+              </div>
+            </div>
+            </div>
+            {% endfor %}
+
+    {% else %}
+   <p>
+      No news are available.
+   </p>
+    {% endif %}
+            
+
+
+
+
+            <div class="col-md-2"></div>
+
+
+
+        </div>
+
+
+
+
+            <div class="row" id="news-block">
+            <div class="col-md-2"></div>
+{% if news2 %}
+{% for l in news2 %}
+          <div class="col-md-4">
+          
+            <div class="thumbnail">
+              <img src="{{ l.image.url }}" alt="..." class="image-news">
+              <div class="caption">
+                <h3>{{ l.title }}</h3>
+                <p>{{ l.content | truncatewords:50 }} </p>
+                  <div class="space" id="space-voting"></div>
+                <p><a href="/news/{{ l.id }}/" class="btn btn-primary" role="button">Citește mai mult</a></p>
+              </div>
+            </div>
+            </div>
+            {% endfor %}
+
+
+    {% endif %}
+            
+
+            <div class="col-md-2"></div>
+        </div>
+             <div class="row" id="news-block">
+            <div class="col-md-2"></div>
+{% if news3 %}
+{% for l in news3 %}
+          <div class="col-md-4">
+          
+            <div class="thumbnail">
+              <img src="{{ l.image.url }}" alt="..." class="image-news">
+              <div class="caption">
+                <h3>{{ l.title }}</h3>
+                <p>{{ l.content | truncatewords:10 }} </p>
+                  <div class="space" id="space-voting"></div>
+                <p><a href="/news/{{ l.id }}/" class="btn btn-primary" role="button">Citește mai mult</a></p>
+              </div>
+            </div>
+            </div>
+            {% endfor %}
+
+
+    {% endif %}
+            
+
+            <div class="col-md-2"></div>
+        </div>
+            <div class="space"></div>
+
+        <!-- News - Alina-->
+        
+		
+
+
+<div class="row" id="news-block">
+            <div class="col-md-2"></div>
+{% if news4 %}
+{% for l in news4 %}
+          <div class="col-md-4">
+          
+            <div class="thumbnail">
+              <img src="{{ l.image.url }}" alt="..." class="image-news">
+              <div class="caption">
+                <h3>{{ l.title }}</h3>
+                <p>{{ l.content | truncatewords:50 }} </p>
+                  <div class="space" id="space-voting"></div>
+                <p><a href="/news/{{ l.id }}/" class="btn btn-primary" role="button">Citește mai mult</a></p>
+              </div>
+            </div>
+            </div>
+            {% endfor %}
+
+
+    {% endif %}
+            
+
+            <div class="col-md-2"></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<!-- .subfooter start -->
+			<!-- ================ -->
+            <div class="space"></div>
+            <div class="subfooter">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 text-center subfooter-links">
+                                        <tr>
+                                          <td><a href="#">Despre proiect</a></td>
+                                          <td><a href="#">Contacte</a></td>
+                                          <td><a href="#">Link3</a></td>
+                                          <td><a href="#">Link4</a></td>
+                                          <td><a href="#">Link5</a></td>
+                                          <td><a href="#">Link6</a></td>
+                                        </tr>
+                                                                            
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+
+
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-center">Copyright © 2016 <a target="_blank" href="www.initiativa.org">Digital Democracy</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- .subfooter end -->
+		<!-- footer end -->
+
+
+
+
+
+
+	</body>
+€</html>

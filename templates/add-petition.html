@@ -1,0 +1,278 @@
+
+
+{% block content %}
+{% load staticfiles %}
+
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Proiectul Inițiativa</title>
+<meta name="description" content="Initiativa Website">
+<meta name="author" content="htmlcoder.me">
+<!-- Mobile Meta -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Favicon -->
+<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+<!-- Web Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+<!-- Bootstrap core CSS -->
+<link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+<!-- Font Awesome CSS -->
+<link href="{% static 'fonts/font-awesome/css/font-awesome.css' %}" rel="stylesheet">
+<!-- Plugins -->
+<link href="{% static 'css/animations.css' %}" rel="stylesheet">
+<!-- Worthy core CSS file -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<!-- Custom css -->
+<link href="{% static 'css/custom.css' %}" rel="stylesheet">
+</head>
+
+
+	<body class="no-trans">
+{% include 'navbar.html' %}
+
+ 
+
+       <!-- Add Petition-->
+        
+
+
+
+ 
+
+
+
+
+ <div class="space"></div>   
+ <div class="space"></div> 
+ <div class="space"></div> 
+
+
+
+
+<div class='row'>
+<div class='col-sm-6 col-sm-offset-3'>
+
+
+
+<h1 class='text-align-center'>Petiție</h1>
+{{ thanks }}
+
+<form method='POST' action=''>{% csrf_token %}
+{{ petition_form|crispy }}
+{% if request.user.is_authenticated %}
+<input class='btn btn-default' type='submit' value='Submit' />
+{% else %}
+<div class='container'>
+    <div class="row" style="font-size: 18px;">
+            <p class="h4">Vă rugăm să vă autentificaţi:</p>
+            <a href="http://initiativa.org/accounts/register/"><button name="button" class="btn btn-primary btn-responsive">Înregistraţi-vă</button></a> sau <a href="http://initiativa.org/accounts/login/"><button name="button" class="btn btn-primary btn-responsive">Accesaţi contul</button></a>
+    </div>
+</div>
+{% endif %}
+</form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+  <div class="col-md-12">
+														
+      <form class="form-horizontal">
+     <div class="col-sm-offset-1 col-sm-10">
+        <h3>Petition Data</h3>
+          <div class="space"></div>
+      </div>
+          <div class="form-group">
+  <label for="Level" class="col-sm-2 control-label">Level</label>
+      <div class="col-sm-2">
+          <select class="form-control">
+            <option>National</option>
+            <option>Regional/Municipal</option>
+            <option>Local</option>
+          </select>
+      </div>
+</div>
+          <div class="form-group">
+  <label for="Level" class="col-sm-2 control-label">Topic</label>
+      <div class="col-sm-3">
+          <select class="form-control">
+            <option>Transport/Roads</option>
+            <option>Infrastructure</option>
+            <option>Safety</option>
+            <option>Consumers & Service</option>
+            <option>Regional/Municipality</option>
+            <option>Population & Migration</option>
+            <option>Justice</option>
+            <option>Economics</option>
+            <option>Education & Science</option>
+            <option>Governmental administration</option>
+            <option>Governmental support</option>
+            <option>Business</option>
+            <option>Ecology</option>
+            <option>Governmental support</option>
+            <option>Health</option>
+          </select>
+      </div>
+</div>
+          <div class="form-group">
+  <label for="Select" class="col-sm-2 control-label">Region/Municipality</label>
+      <div class="col-sm-3">
+          <select class="form-control">
+            <option>Municipiul Chişinău</option>
+            <option>Municipiul Bălţi</option>
+            <option>Municipiul Comrat</option>
+            <option>Municipiul Tiraspol</option>
+            <option>Municipiul Tighina (Bender)</option>
+            <option>Anenii Noi</option>
+            <option>Basarabeasca</option>
+            <option>Briceni</option>
+            <option>Cahul</option>
+            <option>Călăraşi</option>
+            <option>Cantemir</option>
+            <option>Căuşeni</option>
+            <option>Cimişlia</option>
+            <option>Donduşeni</option>
+            <option>Drochia</option>
+            <option>Dubasari</option>
+            <option>Edineţ</option>
+            <option>Făleşti</option>
+            <option>Floreşti</option>
+            <option>Glodeni</option>
+            <option>Hînceşti</option>
+            <option>Ialoveni</option>
+            <option>Leova</option>
+            <option>Nisporeni</option>
+            <option>Ocniţa</option>
+            <option>Orhei</option>
+            <option>Rezina</option>
+            <option>Rîşcani</option>
+            <option>Sîngerei</option>
+            <option>Şoldăneşti</option>
+            <option>Soroca</option>
+            <option>Ştefan Vodă</option>
+            <option>Străşeni</option>
+            <option>Taraclia</option>
+            <option>Teleneşti</option>
+            <option>Ungheni</option>
+          </select>
+      </div>
+</div>
+   <div class="form-group">  
+         <label for="Description" class="col-sm-2 control-label">Description</label>
+               <div class="col-sm-9">
+         <textarea class="form-control" rows="10"></textarea>
+               </div>
+    </div>
+          
+    <div class="form-group">  
+         <label for="Impact" class="col-sm-2 control-label">Impact</label>
+               <div class="col-sm-9">
+         <textarea class="form-control" rows="4"></textarea>
+               </div>
+    </div>
+          
+   <div class="form-group">  
+         <label for="Solution" class="col-sm-2 control-label">Solution</label>
+               <div class="col-sm-9">
+         <textarea class="form-control" rows="4"></textarea>
+               </div>
+    </div>
+          
+          
+    <div class="form-group">
+        <label for="UploadFile" class="col-sm-2 control-label">Upload a file</label>
+        <div class="col-sm-offset col-sm-10">
+      <button type="button" class="btn btn-primary btn-lg">Browse</button>
+        </div>
+  </div>
+          
+    <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox">I accept the <a href="../static/#">Terms and Conditions</a>
+        </label>
+      </div>
+    </div>
+  </div>
+          <div class="space"></div>
+          
+  <div class="form-group">
+    <div class="col-sm-offset-5 col-sm-10">
+      <button type="submit" class="btn btn-default">Add Petition</button>
+    </div>
+  </div>
+</form>
+  </div>
+        </div> -->
+
+        
+        <!-- Add Petition-->
+        
+		<!-- section start -->
+		<!-- ================ -->
+ 
+		<!-- section end -->
+
+		<!-- footer start -->
+		<!-- ================ -->
+		<footer id="footer">
+
+			<!-- .footer start -->
+			<!-- ================ -->
+			
+			<!-- .footer end -->
+
+			<!-- .subfooter start -->
+			<!-- ================ -->
+            <div class="space"></div>
+			<div class="subfooter">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-center">Copyright © 2016 Initiativa </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .subfooter end -->
+
+		</footer>
+		<!-- footer end -->
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+
+
+	</body>
+</html>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!-- {#  <div id="comments">
+  {% get_comment_count for petition as comment_count %}
+  {% if comment_count %}
+  <H4 class="center">{{ comment_count }} comment{{ comment_count|pluralize }}</H4>
+
+  {% endif %}
+    <div id="comment-list">
+    {% render_comment_list for petition %}
+  </div>
+
+  {% if petition.allow_comments %}
+
+  <H4 class="center">your comment</H4>
+  <div id="comment-form">
+    {% render_comment_form for petition %}
+  </div>
+  {% else %}
+  <h4 class="center">comments are disabled for this article</h4>
+  {% endif %}
+</div>#   } -->

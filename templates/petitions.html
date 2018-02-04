@@ -1,0 +1,141 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	{% include 'head.html' %}
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+        
+		<!-- header start -->
+		<!-- ================ --> 
+{% include 'navbar.html' %}
+
+
+
+
+
+		<!-- section start -->
+		<!-- ================ -->
+<div class="space"></div>
+<div class="space"></div>
+<div class="space"></div>
+<div class="space"></div>
+
+<div class="container">
+    <div class="col-md-12">
+
+        <h1 class="title text-center">Petiții</h1>
+        <div class="col-md-6">
+            
+            
+            <!-- Block Nr. 1 from "Petitii" column  -->
+{% if petition %}
+            {% for p in petition %}
+            {% if p.posted == True %}
+              <div class="col-md-10 col-md-offset-1 isotope-item laws col-center">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="{{ p.image.url }}" alt="">
+										<a class="overlay" href="{% url 'petitions:detail' p.id %}" data-target="#petition-1" id="laws">
+											<i class="fa fa-search-plus"></i>
+											<span>{{ p.petition_level }}</span>
+										</a>
+									</div>
+                                        <a href="{% url 'petitions:detail' p.id %}" data-toggle="modal" data-target="#law-10">{{ p.question|truncatewords:10 }}</a>
+								</div>
+
+							</div>
+            {% endif %}
+                                            {% endfor %}
+
+
+                     {% endif %}
+
+            </div>
+<!-- Button "Alte petitii" for showing more existing items of petitii -->
+                 <p>
+                    <div class="col-md-6">
+{% if petition_hidden %}
+            {% for p in petition_hidden %}
+            {% if p.posted == True %}
+              <div class="col-md-10 col-md-offset-1 isotope-item laws col-center">
+                <div class="image-box">
+                  <div class="overlay-container">
+                    <img src="{{ p.image.url }}" alt="">
+                    <a class="overlay" href="{% url 'petitions:detail' p.id %}" data-target="#petition-1" id="petitions">
+                      <i class="fa fa-search-plus"></i>
+                      <span>{{ p.petition_level }}</span>
+                    </a>
+                  </div>
+                                        <a href="{% url 'petitions:detail' p.id %}" data-toggle="modal" data-target="#law-10">{{ p.question|truncatewords:10}}</a>
+                </div>
+
+              </div>
+
+                     {% endif %}
+                                            {% endfor %}
+                                 {% else %}
+                     <p>La moment nu sunt alte petiţii</p>
+                     {% endif %}
+
+                   </div>
+
+                </p>
+        
+        </div>
+    </div>
+</div>
+
+<div class="space"></div>
+
+    <a href="/addpetitions/"><button type="button" class="propose-petition btn center-block btn-danger">PROPUNE PETIȚIE</button></a>
+				
+            
+		<!-- section end -->
+
+
+			<!-- .subfooter start -->
+			<!-- ================ -->
+            <div class="space"></div>
+            <div class="subfooter">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 text-center subfooter-links">
+                                        <tr>
+                                          <td><a href="/about/">Despre proiect</a></td>
+                                          <td><a href="/addpetitions/">Propune petiție</a></td>
+                                          <td><a href="/accounts/register/">Înregistrare</a></td>
+                                        </tr>
+                                                                            
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+
+
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="text-center">Copyright © 2016 <a target="_blank" href="www.initiativa.org">Digital Democracy</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- .subfooter end -->
+		<!-- footer end -->
+
+
+
+
+
+
+	</body>
+</html>
